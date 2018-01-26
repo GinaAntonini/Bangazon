@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bangazon
+namespace Bangazon.Departments
 {
-    class Program
+    class HumanResources
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
