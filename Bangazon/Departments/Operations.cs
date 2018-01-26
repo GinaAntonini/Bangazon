@@ -4,20 +4,16 @@ using System.Collections.Generic;
 
 namespace Bangazon.Departments
 {
-    public class Operations
+    class Operations : Department
     {
         public string HoursOfOperation { get; set; }
         public string Budget { get; set; }
 
         private Dictionary<string, string> _policies = new Dictionary<string, string>();
 
-        public Operations(string hoursOfOperation, string budget, Dictionary<string, string> policies)
+        public Operations(string name, string supervisor, string location, int employeeCount, Dictionary<string, string> policies) : base(name, supervisor, location, employeeCount)
         {
-            HoursOfOperation = hoursOfOperation;
-            Budget = budget;
-            _policies = policies;
         }
-
 
         public void AddPolicy(string title, string text)
         {

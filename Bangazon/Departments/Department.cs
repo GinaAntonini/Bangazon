@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Bangazon.Departments
 {
@@ -11,14 +8,19 @@ namespace Bangazon.Departments
         private string _name;
         private string _supervisor;
         private string _location;
-        private int _employee_count;
+        private int _employeeCount;
 
-        public Department(string name, string supervisor, string location, int employees)
+        public Department(string name, string supervisor, string location, int employeeCount)
         {
             _name = name;
             _supervisor = supervisor;
             _location = location;
-            _employee_count = employees;
+            _employeeCount = employeeCount;
+        }
+
+        public string toString()
+        {
+            return $"Department: {_name}; Supervisor: {_supervisor}; Location: {_location}; Employee count: {_employeeCount}";
         }
     }
 }
