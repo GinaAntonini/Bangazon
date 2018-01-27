@@ -11,21 +11,26 @@ namespace Bangazon.Departments
 
         private Dictionary<string, string> LateDays = new Dictionary<string, string>();
 
-        public void WorkLate(string Holiday, string Time)
+        public void WorkLate(string Day, string Time)
         {
-            LateDays.Add(Holiday, Time);
+            LateDays.Add(Day, Time);
 
-            foreach (KeyValuePair<string, string> Day in LateDays)
+            foreach (KeyValuePair<string, string> LateDay in LateDays)
             {
-                Console.WriteLine($"{Name} works late on {Day.Value} because sales increase around this time.");
+                Console.WriteLine($"{Name} works late on {LateDay.Key} because sales increase around this time. It sounds like {LateDay.Value} extra hours of work will get the job done.");
             }
 
         }
 
         // Overriding the default toString() method for each object instance
-        public string ToString()
+        public override string ToString()
         {
             return $"{HoursOfOperation} {HolidaysToWork}";
+        }
+
+        public override void SetBudget(double budget)
+        {
+            this.Budget += budget + 200000.00;
         }
     }
 }

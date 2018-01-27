@@ -22,17 +22,23 @@ namespace Bangazon
 
             // Iterate over all items in the list and output a string 
             // representation of the class
+            
+            Operations.WorkLate("Christmas", "5");
+            Sales.Meet("Thursday");
+            Sales.CheckThePipeline(50);
+            Accounting.ExtraWork("CPA");
+
+
+            double baseBudget = 75000.00;
+
             foreach (Department d in departments)
             {
+                d.SetBudget(baseBudget);
                 Console.WriteLine($"{d.toString()}");
             }
+
             Console.ReadLine();
+        
         }
     }
 }
-
-//Create 2 more classes for departments of your choosing.
-//Create some instances of each department in the Main method.
-//Assign values to the properties of each instance.
-//Call come of the methods on the instances to verify their operation.
-//Add all derived departments to a List of type Department.

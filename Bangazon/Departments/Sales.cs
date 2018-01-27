@@ -1,34 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Bangazon.Departments
 {
     class Sales : Department
     {
-        public string SalesInPipleine { get; set; }
-        public string Budget { get; set; }
+        public int SalesInPipleine { get; set; }
+        public bool UpTheSalesGame { get; set; }
 
-        private Dictionary<string, string> _policies = new Dictionary<string, string>();
+        private Dictionary<string, string> _sales = new Dictionary<string, string>();
 
 
-        public void AddPolicy(string title, string text)
+        public void CheckThePipeline(int SalesInPipeline)
         {
-            _policies.Add(title, text);
-
-            foreach (KeyValuePair<string, string> policy in _policies)
+            if (UpTheSalesGame)
             {
-                Console.WriteLine($"{policy.Value}");
+                Console.WriteLine($"There are {SalesInPipeline} sales in the pipeline. That's not enough! Time to up the sales game.");
             }
-
+            else
+            {
+                Console.WriteLine($"There are {SalesInPipeline}. We have plenty of calling to do.");
+            }
         }
 
-        // Overriding the default toString() method for each object instance
-        public string ToString()
+        public override void SetBudget(double budget)
         {
-            return $"{SalesInPipeline} {Budget}";
+            this.Budget += budget + 300000.00;
         }
     }
 }

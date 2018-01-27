@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bangazon.Departments
 {
-    class Accounting : Department, IAccounting
+    class Accounting : Department 
     {
         public string OpenPosition { get; set; }
         public bool BusySeason { get; set; }
@@ -26,12 +22,15 @@ namespace Bangazon.Departments
         }
 
         // Overriding the default toString() method for each object instance
-        public string ToString()
+        public override string ToString()
         {
             return $"{OpenPosition} {BusySeason}";
         }
 
-
+        public override void SetBudget(double budget)
+        {
+            this.Budget += budget + 400000.00;
+        }
     }
 }
 
