@@ -11,14 +11,14 @@ namespace Bangazon
             List<Department> departments = new List<Department>();
 
             // Create some instances
-            Operations ops = new Operations("Operations", "Amelia Earhart", "Nashville", 12);
-            Sales sales = new Sales("Sales", "Cornelia Fort", "Brentwood", 22);
-            HumanResources hr = new HumanResources("Human Resources", "Sally Ride", "Nashville", 5);
+            var Operations = new Operations { Name = "Operations", Supervisor = "Amelia Earhart", Location = "Nashville", EmployeeCount = 12 };
+            var Sales = new Sales { Name = "Sales", Supervisor = "Cornelia Fort", Location = "Brentwood", EmployeeCount = 22 };
+            var Accounting = new Accounting { Name = "Accounting", Supervisor = "Sally Ride", Location = "Nashville", EmployeeCount = 5 };
 
             // Add derived departments to the list
-            departments.Add(ops);
-            departments.Add(sales);
-            departments.Add(hr);
+            departments.Add(Operations);
+            departments.Add(Sales);
+            departments.Add(Accounting);
 
             // Iterate over all items in the list and output a string 
             // representation of the class
@@ -26,6 +26,7 @@ namespace Bangazon
             {
                 Console.WriteLine($"{d.toString()}");
             }
+            Console.ReadLine();
         }
     }
 }

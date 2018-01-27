@@ -7,25 +7,26 @@ namespace Bangazon.Departments
     class Operations : Department
     {
         public string HoursOfOperation { get; set; }
-        public string Budget { get; set; }
+        public string HolidaysToWork { get; set; }
 
-        private Dictionary<string, string> _policies = new Dictionary<string, string>();
+        private Dictionary<string, string> LateDays = new Dictionary<string, string>();
 
-        public Operations(string name, string supervisor, string location, int employeeCount, Dictionary<string, string> policies) : base(name, supervisor, location, employeeCount)
+        public void WorkLate(string Holiday, string Time)
         {
-        }
+            LateDays.Add(Holiday, Time);
 
-        public void AddPolicy(string title, string text)
-        {
-            _policies.Add(title, text);
-
-            foreach (KeyValuePair<string, string> policy in _policies)
+            foreach (KeyValuePair<string, string> Day in LateDays)
             {
-                Console.WriteLine($"{policy.Value}");
+                Console.WriteLine($"{Name} works late on {Day.Value} because sales increase around this time.");
             }
 
         }
 
+        // Overriding the default toString() method for each object instance
+        public string ToString()
+        {
+            return $"{HoursOfOperation} {HolidaysToWork}";
+        }
     }
 }
 

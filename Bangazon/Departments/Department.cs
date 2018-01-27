@@ -10,17 +10,22 @@ namespace Bangazon.Departments
         private string _location;
         private int _employeeCount;
 
-        public Department(string name, string supervisor, string location, int employeeCount)
+        public string Name;
+        public string Supervisor;
+        public string Location;
+        public int EmployeeCount;
+
+        public Department(string Name, string Supervisor, string Location, int EmployeeCount)
         {
-            _name = name;
-            _supervisor = supervisor;
-            _location = location;
-            _employeeCount = employeeCount;
+            _name = Name;
+            _supervisor = Supervisor;
+            _location = Location;
+            _employeeCount = EmployeeCount;
         }
 
         public string toString()
         {
-            return $"Department: {_name}; Supervisor: {_supervisor}; Location: {_location}; Employee count: {_employeeCount}";
+            return $"The department name is {Name} and overseen by {Supervisor}. This department has {EmployeeCount} employees and is housed in our {Location} location.";
         }
     }
 }

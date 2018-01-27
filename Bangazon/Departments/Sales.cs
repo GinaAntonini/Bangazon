@@ -8,14 +8,10 @@ namespace Bangazon.Departments
 {
     class Sales : Department
     {
-        public string HoursOfOperation { get; set; }
+        public string SalesInPipleine { get; set; }
         public string Budget { get; set; }
 
         private Dictionary<string, string> _policies = new Dictionary<string, string>();
-
-        public Sales(string name, string supervisor, string location, int employeeCount) : base(name, supervisor, location, employeeCount)
-        {
-        }
 
 
         public void AddPolicy(string title, string text)
@@ -27,6 +23,12 @@ namespace Bangazon.Departments
                 Console.WriteLine($"{policy.Value}");
             }
 
+        }
+
+        // Overriding the default toString() method for each object instance
+        public string ToString()
+        {
+            return $"{SalesInPipeline} {Budget}";
         }
     }
 }

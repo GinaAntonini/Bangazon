@@ -43,7 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Departments\Department.cs" />
-    <Compile Include="Departments\HumanResources.cs" />
+    <Compile Include="Departments\Accounting.cs" />
+    <Compile Include="Departments\IAccounting.cs" />
     <Compile Include="Departments\Operations.cs" />
     <Compile Include="Departments\Sales.cs" />
     <Compile Include="Program.cs" />
