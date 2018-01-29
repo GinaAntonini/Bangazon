@@ -20,7 +20,7 @@ namespace Bangazon.Departments
             }
             else
             {
-                Console.WriteLine($"There are {SalesInPipeline}. We have plenty of calling to do.");
+                Console.WriteLine($"There are {SalesInPipeline} sales in the pipeline. We have plenty of calling to do.");
             }
         }
 

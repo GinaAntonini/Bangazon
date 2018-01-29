@@ -3,7 +3,7 @@
 
 namespace Bangazon.Departments
 {
-   abstract class Department
+    abstract partial class Department
     {
 
         public string Name { get; set; }
@@ -12,7 +12,6 @@ namespace Bangazon.Departments
         public string MeetingDay { get; set; }
         public int EmployeeCount { get; set; }
         public string Budget { get; set; }
-
 
         public string toString()
         {

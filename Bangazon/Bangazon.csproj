@@ -44,9 +44,14 @@
   <ItemGroup>
     <Compile Include="Departments\Department.cs" />
     <Compile Include="Departments\Accounting.cs" />
-    <Compile Include="Departments\IAccounting.cs" />
     <Compile Include="Departments\Operations.cs" />
     <Compile Include="Departments\Sales.cs" />
+    <Compile Include="Employees\AccountingEmployee.cs" />
+    <Compile Include="Employees\Employee.cs" />
+    <Compile Include="Employees\IFullTime.cs" />
+    <Compile Include="Employees\IPartTime.cs" />
+    <Compile Include="Employees\OperationsEmployee.cs" />
+    <Compile Include="Employees\SalesEmployee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
